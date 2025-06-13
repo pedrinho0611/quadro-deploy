@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deploy Serverless - AWS Lambda</title>
+    <link rel="stylesheet" href="sobre_deploy.css">
+</head>
+<body>
+    <div class="img-banner-wrapper">
+        <img src="deploy aws.png" alt="Diagrama de arquitetura AWS Lambda" class="img-banner" loading="eager" style="image-rendering: -webkit-optimize-contrast;">
+        <div class="img-overlay"></div>
+    </div>
+    <nav class="navbar">
+        <div class="navbar-title">Deploy Serverless: AWS Lambda</div>
+    </nav>
+    <div class="container">
+        <h1>Deploy Serverless (AWS Lambda)</h1>
+        <div class="topicos-wrapper">
+            <div class="topico-card">
+                <h2>O que é?</h2>
+                <p><b>AWS Lambda</b> é uma plataforma serverless da Amazon que executa funções em resposta a eventos, sem necessidade de gerenciar servidores. O desenvolvedor apenas escreve o código da função, define os gatilhos (eventos) e faz o upload para a nuvem.</p>
+            </div>
+            <div class="topico-card">
+                <h2>Como funciona?</h2>
+                <p>Você cria funções (em Node.js, Python, Java, etc.), define eventos que as disparam (HTTP, upload em S3, mensagens em fila, etc.) e a AWS executa automaticamente o código quando o evento ocorre. Não é preciso configurar ou manter servidores.</p>
+            </div>
+            <div class="topico-card">
+                <h2>Vantagens</h2>
+                <p>- Escalabilidade automática conforme a demanda.<br>
+                - Custo proporcional ao uso.<br>
+                - Sem necessidade de manutenção de servidores.<br>
+                - Foco total no desenvolvimento da lógica de negócio.</p>
+            </div>
+        </div>
+        <div class="topicos-wrapper">
+            <div class="topico-card">
+                <h2>Desvantagens</h2>
+                <p>- Possível latência no cold start.<br>
+                - Limites de tempo e recursos por função.<br>
+                - Dependência do fornecedor (vendor lock-in).<br>
+                - Debug e monitoramento podem ser mais complexos.</p>
+            </div>
+            <div class="topico-card">
+                <h2>Exemplo prático</h2>
+                <p>Imagine um sistema de processamento de imagens: ao receber uma imagem em um bucket S3, uma função Lambda é acionada para redimensionar e salvar a imagem em outro local automaticamente.</p>
+            </div>
+            <div class="topico-card">
+                <h2>Quando usar?</h2>
+                <p>Ideal para startups, equipes pequenas, APIs event-driven, protótipos rápidos e aplicações com demanda variável, onde a escalabilidade e o baixo custo operacional são essenciais.</p>
+            </div>
+        </div>
+        <div class="links-pesquisa-titulo">Links de pesquisa</div>
+        <div class="links-pesquisa">
+            <a href="https://github.com/aws-samples/aws-lambda-deploy" target="_blank">aws-samples/aws-lambda-deploy</a>
+            <a href="https://github.com/dwyl/aws-lambda-deploy" target="_blank">dwyl/aws-lambda-deploy</a>
+        </div>
+    </div>
+    <footer class="footer">
+        © 2025 Pedro Rodrigues. Todos os direitos reservados.
+    </footer>
+    <script src="sobre_deploy.js"></script>
+</body>
+</html>
