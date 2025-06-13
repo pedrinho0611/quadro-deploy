@@ -1,0 +1,100 @@
+```css
+body {
+    background: linear-gradient(120deg, #e0e7ff 0%, #f9fafb 100%);
+    min-height: 100vh;
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+body::before {
+    content: '';
+    position: fixed;
+    top: -100px;
+    left: -100px;
+    width: 120vw;
+    height: 120vh;
+    background: radial-gradient(circle at 20% 30%, #6366f1 0%, transparent 60%),
+                radial-gradient(circle at 80% 70%, #a5b4fc 0%, transparent 60%),
+                radial-gradient(circle at 50% 90%, #818cf8 0%, transparent 70%);
+    opacity: 0.18;
+    z-index: 0;
+    animation: fundoAnimado 12s linear infinite alternate;
+}
+@keyframes fundoAnimado {
+    0% {
+        filter: blur(0px);
+        transform: scale(1) rotate(0deg);
+    }
+    100% {
+        filter: blur(2px);
+        transform: scale(1.05) rotate(2deg);
+    }
+}
+.container {
+    background: #fff;
+    max-width: 900px;
+    margin: 40px auto 0 auto;
+    box-shadow: 0 4px 24px rgba(60, 72, 88, 0.12);
+    border-radius: 18px;
+    padding: 36px 32px 32px 32px;
+    position: relative;
+    z-index: 1;
+    border: 1.5px solid #e0e7ff;
+}
+h1 {
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 32px;
+    font-size: 2.2rem;
+    color: #3b3b5c;
+    letter-spacing: 1px;
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 12px;
+    background: #f4f6fb;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(60, 72, 88, 0.07);
+}
+th, td {
+    border-bottom: 1.5px solid #e0e7ff;
+    padding: 18px 14px;
+    text-align: left;
+    font-size: 1.05rem;
+}
+th {
+    background-color: #6366f1;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    border-bottom: 2.5px solid #a5b4fc;
+}
+tr:nth-child(even) {
+    background-color: #e0e7ff;
+}
+tr:nth-child(odd) td {
+    background-color: #f4f6fb;
+}
+tr:last-child td {
+    border-bottom: none;
+}
+td {
+    color: #3b3b5c;
+}
+@media (max-width: 700px) {
+    .container {
+        padding: 12px 2vw;
+    }
+    th, td {
+        padding: 10px 4px;
+        font-size: 0.98rem;
+    }
+    h1 {
+        font-size: 1.3rem;
+    }
+}
+```

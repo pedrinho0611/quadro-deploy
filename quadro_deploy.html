@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadro Comparativo de Deploy</title>
+    <link rel="stylesheet" href="quadro_deploy.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Quadro Comparativo: Formas de Deploy para Diferentes Cenários</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Cenário</th>
+                    <th>Forma de Deploy Recomendada</th>
+                    <th>Justificativa</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Startup com equipe de 5 devs</td>
+                    <td>Deploy Contínuo (CI/CD) em Cloud (ex: Vercel, Heroku, AWS)</td>
+                    <td>Agilidade, automação, fácil rollback, integração com ferramentas modernas.</td>
+                </tr>
+                <tr>
+                    <td>Estudante publicando o TCC</td>
+                    <td>Deploy Manual em Hosting Gratuito (ex: GitHub Pages, Netlify)</td>
+                    <td>Simplicidade, baixo custo, fácil configuração.</td>
+                </tr>
+                <tr>
+                    <td>Empresas com sistema legado em PHP</td>
+                    <td>FTP/SFTP ou Deploy via Painel (cPanel)</td>
+                    <td>Compatibilidade com infraestrutura existente, baixo impacto, fácil manutenção.</td>
+                </tr>
+                <tr>
+                    <td>Sistema complexo com vários desenvolvedores</td>
+                    <td>Deploy Automatizado com Pipeline CI/CD + Containers (Docker/Kubernetes)</td>
+                    <td>Escalabilidade, controle de versões, integração contínua, facilidade de gerenciamento.</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</body>
+</html>
