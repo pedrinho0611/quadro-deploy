@@ -1,4 +1,3 @@
-```css
 body {
     background: linear-gradient(120deg, #e0e7ff 0%, #f9fafb 100%);
     min-height: 100vh;
@@ -102,16 +101,134 @@ tr:last-child td {
 td {
     color: #3b3b5c;
 }
-@media (max-width: 700px) {
-    .container {
-        padding: 12px 2vw;
+.navbar {
+    width: 100vw;
+    background: linear-gradient(90deg, #6366f1 0%, #818cf8 100%);
+    color: #fff;
+    box-shadow: 0 2px 12px 0 rgba(99,102,241,0.10);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    height: 90px;
+    padding: 0;
+    margin-top: 0;
+}
+.navbar-title {
+    font-size: 1.7rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #fff;
+    text-align: center;
+    width: 100%;
+    margin: 0;
+    padding-top: 12px;
+}
+.navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 32px;
+    margin: 0 0 10px 0;
+    padding: 0;
+    justify-content: center;
+}
+.navbar-links li {
+    display: inline;
+}
+.navbar-links a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 1.1rem;
+    padding: 10px 18px;
+    border-radius: 6px;
+    transition: background 0.2s, color 0.2s;
+}
+.navbar-links a:hover {
+    background: #e0e7ff;
+    color: #6366f1;
+}
+.container {
+    margin-top: 120px;
+}
+.topicos-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+    margin: 40px auto 0 auto;
+    max-width: 1100px;
+    z-index: 2;
+    position: relative;
+}
+.topico-card {
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 2px 12px 0 rgba(99,102,241,0.10);
+    border: 1.5px solid #e0e7ff;
+    padding: 28px 24px 22px 24px;
+    width: 300px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.35s cubic-bezier(.4,1.4,.6,1), box-shadow 0.35s cubic-bezier(.4,1.4,.6,1);
+    cursor: pointer;
+}
+.topico-card:hover {
+    transform: translateY(-16px) scale(1.04);
+    box-shadow: 0 12px 36px 0 rgba(99,102,241,0.18), 0 2px 8px rgba(60, 72, 88, 0.10);
+}
+.topico-card h2 {
+    color: #6366f1;
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+    margin-top: 0;
+    text-align: center;
+}
+.topico-card p {
+    color: #3b3b5c;
+    font-size: 1rem;
+    text-align: center;
+    margin: 0;
+}
+.footer {
+    width: 100vw;
+    background: #6366f1;
+    color: #fff;
+    text-align: center;
+    padding: 18px 0 14px 0;
+    font-size: 1.05rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    margin-top: 48px;
+    position: relative;
+    z-index: 10;
+    box-shadow: 0 -2px 12px 0 rgba(99,102,241,0.08);
+}
+@media (max-width: 1000px) {
+    .topicos-wrapper {
+        flex-direction: column;
+        align-items: center;
+        gap: 18px;
     }
-    th, td {
-        padding: 10px 4px;
-        font-size: 0.98rem;
-    }
-    h1 {
-        font-size: 1.3rem;
+    .topico-card {
+        width: 90vw;
+        min-width: 0;
     }
 }
-```
+@media (max-width: 700px) {
+    .navbar-title {
+        font-size: 1rem;
+        padding-top: 8px;
+    }
+    .navbar-links {
+        gap: 8px;
+    }
+    .container {
+        margin-top: 20px;
+    }
+}
